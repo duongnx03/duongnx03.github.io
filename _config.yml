@@ -18,7 +18,7 @@ email: "duongnx170803@gmail.com"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-theme: "minima"
+theme: "flexible"
 
 rss: rss
 
