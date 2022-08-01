@@ -1,10 +1,11 @@
-kaka [omg] viviv
-hello "aloha" khih
-kaka [omg] viviv
-rroro {1231} kaka
-rroro {1231} kaka
-lsls (bafa) fkdal
-obafamg21321
-lsls (bafa) fkdal
-obafamg21321
-skksksksk
+### Vim for beginners
+##### Why vim?
+.....
+##### Concepts
+1. Modes
+2. Registers
+3. Buffers and Windows
+4. Tabpages
+5. Other concepts
+....
+
