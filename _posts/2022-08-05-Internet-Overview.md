@@ -1,4 +1,4 @@
 # Internet Overview
 
 
-![Network](./images/network.jpeg)
+![Network](/assets/images/network.jpeg)
