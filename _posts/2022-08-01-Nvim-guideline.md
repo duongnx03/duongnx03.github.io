@@ -52,3 +52,5 @@ Enter
 ## Install a plugin in neovim use Packer and Nvchad format.
 
 Reference to [Nvchad](https://nvchad.github.io/config/plugins)
+
+Abc
