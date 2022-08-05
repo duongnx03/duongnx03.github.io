@@ -1,4 +1,4 @@
-# INTERNET
+# How does the internet work? 
 ![Internet](https://st.depositphotos.com/1062624/2003/i/600/depositphotos_20035055-stock-photo-best-internet-concept-of-global.jpg)
 
 ### What is the internet ?  
