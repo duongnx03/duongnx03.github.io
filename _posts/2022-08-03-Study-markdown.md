@@ -1,11 +1,19 @@
-## Introduction
+## Introduction to markdowmn
 
 
-## Why?
-
+## What is markdown format?
+```
+  Markdown is a language for form formatting text used to write content on the web.
+```
 
 ## Benefits
+```
+ + It's commonly used to write quickly without having to take time using the formatting toolbal of text editors.
+ + Designed to be easily converted to HTML and many other formats using a tool of the same name.
+ + Easy to learn  syntax 
+ + Focus on writing 
 
+```
 
 ## Details
 
@@ -69,12 +77,11 @@ end
 
 > This is a quote 
 
-*dvbhskfvbksv*   __vbskfbvhsf__
+*italic text*   __bold text__
 
-> "hfbvkhfdvvhb"
 
 ## Conclusion
-:
+`Markdown helps people to write documents quickly and efficiently, it makes it easier for readers to read and understand.`
 
 
 ## Preview the markdown document in neovim
