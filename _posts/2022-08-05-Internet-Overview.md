@@ -51,10 +51,11 @@ In addition, there are many other popular applications.
   There are two important protocols:
 1. Transmission Control Protocol(TCP)
 2. Internet Protocol (IP)
+ 
+ Each computer divice has a unique IP adress, it helps computers recognize each other more easily.
+The TCP/IP protocols make the data request and receiving possible between to computers via server.
 
-  Each computer divice has a unique IP adress, it helps computers recognize each other more easily.
- The TCP/IP protocols make the data request and receiving possible between to computers via server.
-
+  
 ## How does the internet work?
 
 ### How to transfer data from computer to another one?
@@ -62,20 +63,136 @@ In addition, there are many other popular applications.
  Data is transmitted from one computer to another in the form of bits (10110101010010100100) through
 various media such as Ethernet cables, wireless signals (wifi-radio wares) and fiber optic cables 
 
-#### Bits and bytes 
+#### Bits and byte
 1. Bits(binary digit) is the smallest unit used to represent information in a computer and is also used  
  to measure the transmission speed of information over a network. It is written binary (0 and 1).
 
-2. Byetes is the smallest data storage unit in a computer memory. 1 byte represents 256 stale value of information,
+2. Bytes is the smallest data storage unit in a computer memory. 1 byte represents 256 stale value of information,
 1 byte represent the number 0-255.
 
 ![Bits and bytes](https://st.quantrimang.com/photos/image/2017/08/26/don-vi-do-luong-luu-tru-tren-may-tinh.PNG)
 
-#### Internet transmission media 
-1. Ethernet cables
+#### Internet transmission media (Ethernet cables ,fiber optic cables and  wireless signal )
+
+|             METHOD           |               pro                             |                Con                               |
+|------------------------------|-----------------------------------------------|--------------------------------------------------|
+| Electricity(Ethernet cables) |             cheap                             | signal loss (short transmission)                 |
+| Light(fiber optical cables)  |           really fast     ,    no signal loss |             expensive    ,     hard to work with |
+| Radio waves(wireless-wifi)   |         totally mobile                        |            short range                           |
 
 
 
+### IP addresses 
+#### What is IP?
+ IP (Internet Protocol) is a digital address availble on a network-connected devices to share 
+data with each other through internet connection protocols
+Ex:127.0.2.1  ,  192.142.23.2  ,...
+  
+
+#### What is IP used for?
+
+Each divice connected to the net work has it owns IP address, you can think of it as a home or
+business address.
+IP will help divices on the internet be able to distinguish, share and communicate with each other.
+
+#### Versions of the IP protocol. 
+
+1. IPv4(Internet protocol version 4)
+ It is the fourth version of internet protocols. 
+
+
+
+2. IPv6(Internet protocol version 6)
+
+
+
+### DNS (Domain Name System)
+
+#### What is DNS?
+![DNS](https://imc.org.vn/uploads/plugin/news/519/1627437317-1622235566-dns-server-8-8-8-8-lam-gi-m-t-c-truy-c-p-m-ng.png)
+
+ DNS (Domain Name Systym) invented in 1984 is a system that allows to establish correspondence
+between IP addresses and domain names on the Internet. Simply put, it is a system that helps
+convert numeric IP addresses (for example, 66.220.149.25) to domain names that are easy for
+humans to remember (for example, youtobe.com) and vice versa.
+
+#### Uses
+
+It serves the user as a "Phone Book", capable of searching and translating domain names into
+IP addresses. It stores a huge amount of information and is tied to fixed IP addresses.
+Domain names are easier for users to remember than complex IP addresses.
+
+
+#### Function
+
+ DNS can be understood as an "interpreter" and "communicator".
+When opening a Web browser and entering the website name, the browser will go directly to the
+website without having to go through the IP address of the website. The DNS helps each other to
+translate "IP" addresses into "names" and vice versa. The user only needs to remember the "name",
+no need to remember the IP address.
+
+### Packets, Routing, and Reliability
+
+#### Packets
+![Packets](https://web.stanford.edu/class/cs101/network-packets.png)
+ Packet is a term first coined by Donald Davies in 1965.
+It is used to describe a segment of data that is sent from one computer or device to another
+over a network.In simpler words, you can think of it as a packet full of data that is being 
+transferred to another region.
+
+ Packages divide data into more manageable “parts,” which move information more efficiently,
+and keep network resources from being constrained by a larger file.
+
+ A packet contains source, destination, data, size, and other useful information that helps 
+the packet to arrive at the proper location and reassemble properly.
+![structure](https://www.computerhope.com/jargon/p/packet.jpg)
+
+
+#### Routing
+
+##### Router
+![router](https://static.javatpoint.com/tutorial/computer-network/images/router3.png)
+
+Router is a network device that forwards data packets between computer networks. Understandably,
+the router performs "direction of traffic" on the Internet.Data is sent on the Internet in the form
+of packets (Ex: email, web,...) , data packets will be forwarded from one router to another through
+small networks, which are connected to each other to form a network. link, until the data packet
+reaches its destination.
+
+In simple terms, routers connect devices in a network by transferring data packets between them.
+Routers perform this task by assigning a local IP address to each device on the network. This ensures
+that the data packet arrives at the right place and does not get lost in the network.
+
+##### Routing 
+![Routing](https://www.draytek.com/assets/files/faq/2017/T25824/1_intro.png)
+
+
+Routing is the method that a router or network device uses to deliver packets to the destination in the
+most optimal way, that is, to indicate the best direction and route for the packet. Routers collect and
+maintain routing information to enable transmission and reception of data.
+
+## HTPP and HTML 
+### HTPP 
+#### What is HTPP?
+ Hyper Text Transfer Protocol(HTPP) is the fuondation of the Word Wide Web and is used to load web
+ pages with hyper text links.In simpler words, it is a hypertext transfer protocol used in www to
+ transmit data between Web servers to Web browsers and vice versa.
+
+HTPPS(Hyper Text Transfer Protocol Secure) is an Http protocol that uses SSL (Secure Sockets Layer)
+to encrypt data during data transmission, increasing the security of data transmission between Web
+server and Web browser.
+
+#### How does HTPP work?
+ HTTP gives users a way to interact with web resources such as HTML files by transmitting hypertext
+ messages between clients and servers. HTTP clients generally use Transmission Control Protocol (TCP)
+ connections to communicate with servers.
+
+
+### HTML
+
+HTML (Hyprer Text Markup Language) is a standard markup language for web page creation. It allows
+the creation and structure of sections, paragraphs, and links using HTML elements (the building 
+blocks of a web page) such as tags and attributes. 
 
 
 
