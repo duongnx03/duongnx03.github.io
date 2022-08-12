@@ -189,10 +189,93 @@ server and Web browser.
 
 
 ### HTML
+#### WHat is HTML?
+ HTML (Hyprer Text Markup Language) is a standard markup language for creating web pages. It allows
+ creating and structuring sections, paragraphs, and links using HTML elements. An HTML document is
+ made of many HTML tags and each HTML tag contains different content.
 
-HTML (Hyprer Text Markup Language) is a standard markup language for web page creation. It allows
-the creation and structure of sections, paragraphs, and links using HTML elements (the building 
-blocks of a web page) such as tags and attributes. 
+An HTML document is formed by HTML elements (HTML Elements) specified by pairs of tags (tags and attributes).
+These tag pairs are enclosed by a curly brace (e.g. <html>) and are usually declared as a pair, consisting of
+an opening tag and a closing tag. Ex: <p> and  </p>.
+
+#### WHO is the father of HTML?
+Tim Berners-Lee -The father of HTML also the founder of the World Wide Web and president of the
+World Wide Web Consortium(W3C-organization that sets standards in the Internet environment). 
+HTML settings and structures are operated and developed by the World Wide Web Consortium (W3C).
+
+#### Structure of an HTML paragraph
+
+Each HTML page contains a set of tags (also called elements).Each card will have certain effects,
+helping to build a complete structure for the Website.
+ 
+You can think of it as the building blocks of a website. It forms a directory tree structure that
+includes sections, paragraphs, headings, and other content blocks.
+
+Most HTML elements have an opening and closing tag with a structure like <tag></tag>.
+
+### Encription and Public Keys
+
+#### Encription 
+
+##### What is Encryption
+
+![Encryption](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Public_key_encryption_keys.svg/1200px-Public_key_encryption_keys.svg.png)
+
+Encryption is the process of scrambling or enciphering data so it can be read only by someone
+with the means to return it to its original state. It is a crucial feature of a safe and 
+trustworthy Internet. It helps provide data security for sensitive information. 
+
+##### Function
+Encryption is commonly used to protect data stored on computer systems and data transmitted
+via computer networks, including the Internet. Financial transactions and private messaging
+communications often use encryption to increase security. Encryption is important when we need
+to find out whether data has been tampered with (data integrity), to increase people’s confidence
+that they are communicating with the people they think are communicating with (authentication)
+and to be sure that messages were sent and received (non-repudiation).
+
+##### How Encryption Works ?
+For data communicated over a network, encryption scrambles data using a secret value or key
+known only by the recipient and the sender. For stored data, the secret value is typically 
+known only by the data owner. 
+
+#### Encryption Public Keys
+![Encryption Public Keys](https://www.okta.com/sites/default/files/styles/tinypng/public/media/image/2021-03/public-key-encryption.png?itok=Bxgj8OXl)
+
+##### What is Encryption Public Key?
+It is a method of encrypting data with 2 different keys, in which 1 key called Public Key is
+available for users to use and 1 key is Private Key. Data encrypted with the public key can 
+only be decrypted with the private key, and vice versa.
+Public key encryption also known as asymmetric encryption, is widely used for TLS/SSL(Transport Layer Security/Secure Sockets Layer).
+
+##### Functions
+Public key encryption is important because users can only decrypt encrypted data if they have the private key.
+
+Either of the two keys, the public key and the private key, can be used for encryption with the key used for decryption.
+
+In a public encryption system, public keys can be freely shared with users to encrypt data and verify digital signatures. Only the user who owns the private key can decrypt the encrypted data and create a digital signature.
+
+### Cybersecurity and Crime
+#### Cybersecurity
+![cybersecurity](https://www.cisco.com/c/dam/assets/swa/img/600/what-is-628x353.jpg)
+
+ Cybersecurity is the practice of protecting critical systems and sensitive information from digital attacks,
+also known as information technology (IT) security.
+ Cybersecurity measures are designed to combat threats against networked systems and applications
+
+#### Cybercrime
+![Cybercrime](https://www.tutorialspoint.com/fundamentals_of_science_and_technology/images/cybercrime.jpg)
+
+Cybercrime is a crime involving and using computers and the internet carried out against an individual 
+or organization, possibly a government, for the purpose of harming someone physically or mentally. 
+
+Cybercrime can cause direct harm or indirect harm to whoever the victim is.
+
+However, the largest threat of cybercrime is on the financial security of an individual as well as the government.
+
+Cybercrime causes loss of billions of USD every year.
+
+
+
 
 
 
