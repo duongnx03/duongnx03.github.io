@@ -173,9 +173,9 @@ includes sections, paragraphs, headings, and other content blocks.
 Most HTML elements have an opening and closing tag with a structure like < tag >< /tag >.
 
 
-### Packets, Routing, and Reliability
+## Packets, Routing, and Reliability
 
-#### Packets
+### Packets
 ![Packets](https://web.stanford.edu/class/cs101/network-packets.png)
  Packet is a term first coined by Donald Davies in 1965.
 It is used to describe a segment of data that is sent from one computer or device to another
@@ -190,9 +190,9 @@ the packet to arrive at the proper location and reassemble properly.
 ![structure](https://www.computerhope.com/jargon/p/packet.jpg)
 
 
-#### Routing
+### Routing
 
-##### Router
+#### Router
 ![router](https://static.javatpoint.com/tutorial/computer-network/images/router3.png)
 
 Router is a network device that forwards data packets between computer networks. Understandably,
@@ -205,7 +205,7 @@ In simple terms, routers connect devices in a network by transferring data packe
 Routers perform this task by assigning a local IP address to each device on the network. This ensures
 that the data packet arrives at the right place and does not get lost in the network.
 
-##### Routing 
+#### Routing 
 ![Routing](https://www.draytek.com/assets/files/faq/2017/T25824/1_intro.png)
 
 
@@ -217,7 +217,7 @@ maintain routing information to enable transmission and reception of data.
 
 #### Encryption 
 
-##### What is Encryption
+#### What is Encryption
 
 ![Encryption](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Public_key_encryption_keys.svg/1200px-Public_key_encryption_keys.svg.png)
 
@@ -225,7 +225,7 @@ Encryption is the process of scrambling or enciphering data so it can be read on
 with the means to return it to its original state. It is a crucial feature of a safe and 
 trustworthy Internet. It helps provide data security for sensitive information. 
 
-##### Function
+#### Function
 Encryption is commonly used to protect data stored on computer systems and data transmitted
 via computer networks, including the Internet. Financial transactions and private messaging
 communications often use encryption to increase security. Encryption is important when we need
@@ -233,7 +233,7 @@ to find out whether data has been tampered with (data integrity), to increase pe
 that they are communicating with the people they think are communicating with (authentication)
 and to be sure that messages were sent and received (non-repudiation).
 
-##### How Encryption Works ?
+#### How Encryption Works ?
 For data communicated over a network, encryption scrambles data using a secret value or key
 known only by the recipient and the sender. For stored data, the secret value is typically 
 known only by the data owner. 
@@ -241,13 +241,13 @@ known only by the data owner.
 #### Encryption Public Keys
 ![Encryption Public Keys](https://www.okta.com/sites/default/files/styles/tinypng/public/media/image/2021-03/public-key-encryption.png?itok=Bxgj8OXl)
 
-##### What is Encryption Public Key?
+#### What is Encryption Public Key?
 It is a method of encrypting data with 2 different keys, in which 1 key called Public Key is
 available for users to use and 1 key is Private Key. Data encrypted with the public key can 
 only be decrypted with the private key, and vice versa.
 Public key encryption also known as asymmetric encryption, is widely used for TLS/SSL(Transport Layer Security/Secure Sockets Layer).
 
-##### Functions
+#### Functions
 Public key encryption is important because users can only decrypt encrypted data if they have the private key.
 
 Either of the two keys, the public key and the private key, can be used for encryption with the key used for decryption.
