@@ -198,7 +198,7 @@ the packet to arrive at the proper location and reassemble properly.
 Router is a network device that forwards data packets between computer networks. Understandably,
 the router performs "direction of traffic" on the Internet.Data is sent on the Internet in the form
 of packets (Ex: email, web,...) , data packets will be forwarded from one router to another through
-small networks, which are connected to each other to form a network. link, until the data packet
+small networks, which are connected to each other to form a network link, until the data packet
 reaches its destination.
 
 In simple terms, routers connect devices in a network by transferring data packets between them.
@@ -213,9 +213,9 @@ Routing is the method that a router or network device uses to deliver packets to
 most optimal way, that is, to indicate the best direction and route for the packet. Routers collect and
 maintain routing information to enable transmission and reception of data.
 
-### Encription and Public Keys
+### Encryption and Public Keys
 
-#### Encription 
+#### Encryption 
 
 ##### What is Encryption
 
@@ -253,6 +253,7 @@ Public key encryption is important because users can only decrypt encrypted data
 Either of the two keys, the public key and the private key, can be used for encryption with the key used for decryption.
 
 In a public encryption system, public keys can be freely shared with users to encrypt data and verify digital signatures. Only the user who owns the private key can decrypt the encrypted data and create a digital signature.
+
 
 ### Cybersecurity and Crime
 #### Cybersecurity

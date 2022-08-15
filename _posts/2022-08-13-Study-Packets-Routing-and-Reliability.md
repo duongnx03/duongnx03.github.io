@@ -23,7 +23,7 @@ the packet to arrive at the proper location and reassemble properly.
 Router is a network device that forwards data packets between computer networks. Understandably,
 the router performs "direction of traffic" on the Internet.Data is sent on the Internet in the form
 of packets (Ex: email, web,...) , data packets will be forwarded from one router to another through
-small networks, which are connected to each other to form a network. link, until the data packet
+small networks, which are connected to each other to form a network link, until the data packet
 reaches its destination.
 
 In simple terms, routers connect devices in a network by transferring data packets between them.
