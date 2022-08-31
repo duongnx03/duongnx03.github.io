@@ -37,6 +37,5 @@ Public key encryption is important because users can only decrypt encrypted data
 
 Either of the two keys, the public key and the private key, can be used for encryption with the key used for decryption.
 
-In a public encryption system, public keys can be freely shared with users to encrypt data and verify digital signatures. Only the user who owns the private key can decrypt the encrypted data and create a digital signature.
-
-
+In a public encryption system, public keys can be freely shared with users to encrypt data and verify digital signatures.
+Only the user who owns the private key can decrypt the encrypted data and create a digital signature.
