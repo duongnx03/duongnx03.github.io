@@ -1,5 +1,5 @@
 # Data Structures: Linked List
-## Conceptual
+## I.Conceptual
 ### What is a linked list?
 
  Linked lists are one of the basic data structures used in computer science. They have many direct applications and serve as the foundation for more complex data structures.
@@ -26,7 +26,15 @@
 
   The list ends at a node with data of 30 because the link in that node is absent (or set to null).
 
-## 2.Ideas
+### Algorithm complexity of linked list
+ 
+ Where n is the number of linked elements: 
+ - Add an element at the end of the list: O(n) because it has to go through all the elements to get the node at the end 
+ - Add an element at the beginning of the list: O(1) 
+ - Browse over all elements O(n) 
+ - Remove 1 element: Best case is the beginning of the linked list O(1) and the rest is O(n).
+
+## II.Ideas
 #### _Creation of Linkded list_
 As you know nodes are the most basic building blocks of data structures, and a linked list is made up of interconnected nodes. So we will create another linked list class to use the button class we created in the previous post.
 
@@ -46,7 +54,7 @@ As you know nodes are the most basic building blocks of data structures, and a l
 + insert node in the middle of linked list 
 + swapping node,...
 
-## 3.Implementation
+## III.Implementation
 ```bash
 class Node
   attr_accessor :data, :next_node
@@ -64,6 +72,7 @@ class LinkedList
   def head_node
     @head_node
   end 
+end
 ```
 #insert a new node at the top:
   ```bash
@@ -109,18 +118,88 @@ class LinkedList
     return node, prev
   end
 ```
-end
+#print linked list
+```bash
+  def print 
+    print_list = ""
+    current = head_node
+
+    loop do
+    print_list += "#{current.data} -> "
+    current = current.next_node
+    break if current.nil?
+  end
+```
+
+#some operations are more complicated:
+
++ swapping node:
+```bash
+  def swap_nodes(val1, val2)
+   #find node1 and previous of node1
+    node1, prev1 = find_node(val1)
+
+   #find node2 and previous of node 2
+    node2, prev2 = find_node(val2)
 
 
+    if node1 == node2
+      puts "Elements are the same - no swap needed"
+      return
+    end
+     
+    if node1 == nil || node2 == nil
+      puts "Swap not possible - one or more element is not in the list"
+      return
+    end
+    #update previous pointer
+    #check prev1 is nil
+    if prev1 == nil 
+      head_node = node2
+    else
+      prev1.next_node = node2
+    end
+   #check prev2 is nil 
+    if prev2 == nil 
+      head_node = node1
+    else 
+      prev2.next_node = node1
+    end
+    
+    #update next pointer
+    next_node_of_node1 = node1.next_node
+    node1.next_node = node2.next_node
+    node2.next_node = next_node_of_node1
 
+  end
+```
 
++ insert middle:
+```bash
+  def insert_middle(new_value)
+    new_node = Node.new(new_value)
 
+    if head_node == nil
+      head_node = new_node
+    else
+      temp = head_node
+      middle = head_node
+      while temp.next_node != nil && temp.next_node.next_node != nil
+        temp = temp.next_node.next_node
+        middle = middle.next_node
+      end
+      new_node.next_node = middle.next_node
+      middle.next_node = new_node
+    end
+  end
+```
 
+####And some other operations, we will update later.
 
-## 4.Recap
+## IV.Recap
 
 Linked Lists:
-
+```
 + Consists of nodes each containing data and a link to the next node
 + Is a basic data structure and forms the basis for many other data structures
 + There is a single head node, acting as the first node in the list
@@ -128,3 +207,4 @@ Linked Lists:
 + Quick insertion (Add very quickly with complexity is only O(1))
 + Quick deletion
 + Slow search (Slow search due to having to traverse many nodes to get to the node you are looking for)...
+```
