@@ -43,23 +43,23 @@ Often, due to the data structure, nodes may only be linked to a single other nod
   
 ## 3.Implementation 
 Below i will implement node in ruby language:
-
+```bash
 class Node
-  def initialize(data, link_node = nil)
+  def initialize(data, next_node = nil)
     @data = data
-    @link_node = link_node
+    @next_node = next_node
   end
 
   def data
     @data
   end
 
-  def link_node
-    @link_node
+  def next_node
+    @next_node
   end
   
-  def link_node=(link_node)
-    @link_node = link_node
+  def next_node=(next_node)
+    @next_node = next_node
   end
 end
 
@@ -69,13 +69,13 @@ node1 = Node.new(5, nil)
 node2 = Node.new(9, node1)
 node3 = Node.new(2, node2)
 
-data_node1= node2.link_node.data
-data_node2 = node3.link_node.data
+data_node1= node2.next_node.data
+data_node2 = node3.next_node.data
 data_node3 = node3.data
 puts data_node1
 puts data_node2
 puts data_node3
-
+```
 
 ## 4.Recap
 -Nodes contain data, which can be a variety of data types.
