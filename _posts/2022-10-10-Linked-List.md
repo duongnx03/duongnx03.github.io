@@ -1,5 +1,5 @@
 # Data Structures: Linked List
-## I.Conceptual
+## I. Conceptual
 ### What is a linked list?
 
  Linked lists are one of the basic data structures used in computer science. They have many direct applications and serve as the foundation for more complex data structures.
@@ -34,7 +34,7 @@
  - Browse over all elements O(n) 
  - Remove 1 element: Best case is the beginning of the linked list O(1) and the rest is O(n).
 
-## II.Ideas
+## II. Ideas
 #### _Creation of Linkded list_
 As you know nodes are the most basic building blocks of data structures, and a linked list is made up of interconnected nodes. So we will create another linked list class to use the button class we created in the previous post.
 
@@ -54,7 +54,7 @@ As you know nodes are the most basic building blocks of data structures, and a l
 + insert node in the middle of linked list 
 + swapping node,...
 
-## III.Implementation
+## III. Implementation
 ```bash
 class Node
   attr_accessor :data, :next_node
@@ -196,10 +196,9 @@ end
 
 ####And some other operations, we will update later.
 
-## IV.Recap
+## IV. Recap
 
 Linked Lists:
-```
 + Consists of nodes each containing data and a link to the next node
 + Is a basic data structure and forms the basis for many other data structures
 + There is a single head node, acting as the first node in the list
@@ -207,4 +206,3 @@ Linked Lists:
 + Quick insertion (Add very quickly with complexity is only O(1))
 + Quick deletion
 + Slow search (Slow search due to having to traverse many nodes to get to the node you are looking for)...
-```
