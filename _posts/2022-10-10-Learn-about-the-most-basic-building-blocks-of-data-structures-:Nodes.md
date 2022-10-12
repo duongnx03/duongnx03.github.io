@@ -1,6 +1,6 @@
 # Nodes
 
-## 1.Conceptual
+## 1. Conceptual
 ### What is a nodes?
 ![Nodes ](https://he-s3.s3.amazonaws.com/media/uploads/1b099fd.png)
 

@@ -1,4 +1,5 @@
-# Data Structures: Linked List
+# Data Structures: Linked List and Doubly Linked lis 
+## A. Linked List
 ## I. Conceptual
 ### What is a linked list?
 
@@ -194,7 +195,12 @@ end
   end
 ```
 
-####And some other operations, we will update later.
+#### And some other operations, we will update later.
+## B. Doubly Linked List
+
+
+
+
 
 ## IV. Recap
 
