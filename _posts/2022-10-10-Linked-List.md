@@ -196,15 +196,219 @@ end
 ```
 
 #### And some other operations, we will update later.
+
 ## B. Doubly Linked List
+## I. Conceptual
+### What is a Doubly Linked List?
+![Doubly LinkedList](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png)
 
+  Like a singly linked list, a doubly linked list consists of a series of nodes. But each node contains data and two links (or pointers) to the next and previous nodes in the list.
 
+  The _head node_ is the node at the top of the list and the _tail node_ is the node at the end of the list. The _previous pointer_ of the _head node_ is set to **_null_** and the _next pointer_ of the _tail node_ is set to **_null_**.
 
+![DLL](https://skilled.dev/images/linked-list-train.jpg)
+  Think of the train as a real-life example of a doubly linked list. The train's cockpit is at the top of the list, the last car is at the bottom, and each car in the middle is another node on the list.
+  Each wagon has 2 links like the next node and the previous node of a node in the list.
 
+## II. Ideas
+  In a doubly linked list, because there are 2 pointers, the operation is more complicated than in a singly linked list. We have to track and set the node's next and previous pointers and update the tail of the list if necessary.
 
-## IV. Recap
+  Because of the addition of the pointer and tail properties, adding and removing the head of a doubly linked list is a bit more complicated than a single linked list. However, the previous pointer and tail property makes it much simpler to remove the tail of the list because we don't have to traverse the entire list to be able to do that.
 
-Linked Lists:
+1. **Add to the head:**
+  ![add head](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL_add_front1.png)
+When adding to the head of the doubly linked list, we first need to check if there is a current head to the list. If there isn’t, then the list is empty, and we can simply make our new node both the head and tail of the list and set both pointers to **_null_**. If the list is not empty, then we will:
+
++ Set the current head’s previous pointer to our new head.
++ Set the new head’s next pointer to the current head.
++ Set the new head’s previous pointer to **_null_**.
+
+2. **Add to the tail:**
+![add tail](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL_add_end1.png)
+Similarly, there are two cases when adding a node to the tail of a doubly linked list. If the list is empty, then we make the new node the head and tail of the list and set the pointers to **_null_**. If the list is not empty, then we:
+
++ Set the current tail’s next pointer to the new tail
++ Set the new tail’s previous pointer to the current tail
++ Set the new tail’s next pointer to **_null_**
+
+3. **Removing the head:**
+
+Removing the head involves updating the pointer at the beginning of the list. We'll set the new head's previous pointer (the element immediately after the current head) to **_null_** and update the list's head property. If the head is also the tail (the list has only one node), then the tail removal will also occur.
+
+4. **Removing the tail:**
+
+Similarly, removing the tail involves updating the pointer at the end of the list. We'll set the new tail's next pointer (the element immediately before the tail) to null and update the list's tail property. If the tail is also the head, the process of removing the head will also occur.
+
+5. **Remove a any value in list:**
+
+It is also possible to remove a node from the middle of the list. Since that node is neither the head nor the tail of the list, there are two pointers that must be updated:
+
++ We must set the removed node’s preceding node’s next pointer to its following node.
++ We must set the removed node’s following node’s previous pointer to its preceding node.
+
++ There is no need to change the pointers of the removed node, as updating the pointers of its neighboring nodes will remove it from the list. If no nodes in the list are pointing to it, the node is orphaned.
+
+6. **There are also some other operations such as:**
+ 
+ +
+
+## III. Implementation
+
+**We create a class node to initialize the linked list:**
+```bash
+class Node
+  attr_accessor :next_node, :prev_node
+
+  def initialize(value, next_node=nil, prev_node=nil)
+    @value = value
+    @next_node = nil 
+    @prev_node = nil
+  end
+   
+  def get_value
+    return @value
+  end
+end
+```
+**Next, we will create a doubly linked List class and perform the main operations (methods) for it:**
+```bash
+class DoublyLinkedList
+  def initialize(value)
+    node = Node.new(value)
+    @head_node = node 
+    @tail_node = node 
+  end
+
+  def head_node
+    @head_node
+  end 
+  
+  def tail_node
+    @tail_node
+  end
+```
+
+1. **Add to the head:**
+```bash
+ def add_head(new_value)
+    new_head = Node.new(new_value)
+    current_head = head_node
+
+    if current_head != nil
+      current_head.prev_node = new_head
+      new_head.next_node = current_head
+    end
+
+    @head_node = new_head
+     
+    if tail_node == nil
+      @tail_node = new_head
+    end
+  end
+```
+
+2. **Add to the tail:**
+```bash
+  def add_tail(new_value)
+    new_tail = Node.new(new_value)
+    current_tail = tail_node
+
+    if current_tail != nil
+      current_tail.next_node = new_tail
+      new_tail.prev_node = current_tail
+    end
+
+    @tail_node = new_tail
+
+    if head_node == nil
+      @head_node = new_tail
+    end
+  end
+```
+
+3. **Removing the head:**
+```bash
+ def remove_head_node
+     remove_head_node = head_node
+      if remove_head_node == nil
+        return nil
+      end
+
+      @head_node = remove_head_node.next_node
+
+      if head_node != nil
+        head_node.prev_node = nil
+      end
+
+      if remove_head_node == tail_node
+        remove_tail
+      end
+
+      return remove_head_node
+  end
+```
+
+4. **Removing the tail:**
+```bash
+ def remove_tail
+    remove_tail_node = tail_node 
+      if remove_tail_node == nil
+        return nil
+      end
+
+      @tail_node = remove_tail_node.prev_node
+
+      if tail_node != nil
+        tail_node.next_node = nil
+      end
+      
+      if remove_tail_node == head_node
+        remove_head.get_value
+      end 
+
+      return remove_tail_node.get_value
+  end
+```
+
+5. **Removing a any value in list:**
+```bash
+ def remove_value(value_to_remove)
+    node_to_remove = nil
+    current_node = head_node  
+
+    while current_node != nil
+      if current_node.get_value == value_to_remove  
+        node_to_remove = current_node
+        break
+      else
+        current_node = current_node.next_node
+      end
+    end
+
+    if value_to_remove == nil
+      return nil
+    end
+
+    if node_to_remove == head_node
+      remove_head
+    elsif node_to_remove == tail_node
+      remove_tail
+    else
+      next_node = node_to_remove.next_node
+      prev_node = node_to_remove.prev_node
+      next_node.prev_node = prev_node
+      prev_node.next_node = next_node
+    end
+
+    return node_to_remove
+  end
+end
+```
+
+6. 
+## Recap
+
+**_Linked Lists:_**
 + Consists of nodes each containing data and a link to the next node
 + Is a basic data structure and forms the basis for many other data structures
 + There is a single head node, acting as the first node in the list
@@ -212,3 +416,27 @@ Linked Lists:
 + Quick insertion (Add very quickly with complexity is only O(1))
 + Quick deletion
 + Slow search (Slow search due to having to traverse many nodes to get to the node you are looking for)...
+
+.
+
+**_Doubly Linked List:_**
++ They consist of nodes containing two links to its next and previous node.
++ It has 2 pointers to be able to move in both forward and backward direction.
++ It has a pointer to a unique head node, acting as the first node in the list.
++ It has a pointer to a single tail node, which acts as the last node in the list.
++ The pointers at the beginning of the list must be updated after adding or removing the header.
++ The pointers at the end of the list must be updated after adding or removing the tail.
++ The pointers of the surrounding nodes must be updated after removing from the middle of the list.
+
+## Compare
+
+**Singly Linked List:**
++ Singly Linked List is less memory consuming, through the implementation we also see that the implemet is simpler, the insertion and deletion operations are also simpler.
++ It is only possible to iterate or traverse the list in one direction, so if we lose the pointer to this single list we can lose the single list in memory forever.
+
+**Doubly Linked List:**
+It is possible to iterate from both sides, the search can be faster because it can be manipulated from both sides but will consume more memory.
+
+### Conclusion
+
+We can use Singly Linked List in case we have little memory or memory is really expensive and need to be careful when using memory, otherwise Doubly Linked List is a suitable choice.
