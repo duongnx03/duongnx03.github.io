@@ -1,5 +1,5 @@
-Here you can say lots of fun things about your site.
+Here you can learn a lot of interesting things about programming and technology.
 
-Maybe say a some things about yourself.
+Maybe say a few things about yourself.
 
-Or maybe what you plan to blog about.
+Or you might be planning to write and blog about something.
