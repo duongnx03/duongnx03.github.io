@@ -17,7 +17,7 @@ various media such as Ethernet cables, wireless signals (wifi-radio wares) and f
 
 ![Bits and bytes](https://st.quantrimang.com/photos/image/2017/08/26/don-vi-do-luong-luu-tru-tren-may-tinh.PNG)
 
-:wq#### Internet transmission media (Ethernet cables ,fiber optic cables and  wireless signal )
+ 3. Internet transmission media (Ethernet cables ,fiber optic cables and  wireless signal )
 
 |             METHOD           |               pro                             |                Con                               |
 |------------------------------|-----------------------------------------------|--------------------------------------------------|
